@@ -1,0 +1,36 @@
+// フッター
+.footer {
+  background-color: $primary-color;
+  font-size: 1.7rem;
+  font-family: "Amiri", serif;
+  color: $text-primary-color;
+  height: 90px;
+  text-align: center;
+  &__logo {
+    line-height: 45px;
+    padding-top: 10px;
+  }
+  &__icon {
+    width: 45px;
+  }
+  &__btn {
+    position: fixed;
+    right: 50px;
+    @include mq(md){
+      right: 20px;
+    }
+    @include mq(sm){
+      right: 10px;
+    }
+    bottom: 90px;
+    z-index: 2;
+    width: 70px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 2s;
+    &-active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}

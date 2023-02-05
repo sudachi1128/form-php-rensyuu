@@ -1,0 +1,65 @@
+// ブレイクポイント
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// アニメーション
+@mixin animation(
+  $name,
+  $duration: 1s,
+  $timing-function: ease,
+  $delay: 0s,
+  $iteration-count: 1,
+  $direction: normal
+) {
+  animation: {
+    name: $name;
+    duration: $duration;
+    timing-function: $timing-function;
+    delay: $delay;
+    iteration-count: $iteration-count;
+    direction: $direction;
+  }
+}
+
+// タイトル
+@mixin title {
+  font-size: 5rem;
+  font-family: "Amiri", serif;
+  font-weight: 100;
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 100px;
+  @include mq(lg) {
+    font-size: 4.8rem;
+  }
+  @include mq(md) {
+    font-size: 4.5rem;
+  }
+  @include mq(sm) {
+    font-size: 4rem;
+  }
+  &::after {
+    content: "|";
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// ニューモーフィズム
+@mixin neumorphism {
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #d2d2d6, -5px -5px 5px #ffffff;
+}

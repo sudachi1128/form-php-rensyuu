@@ -1,0 +1,12 @@
+//ブレイクポイント
+$breakpoints: (
+  "sm": "screen and (max-width: 500px)",
+  "md": "screen and (max-width: 768px)",
+  "lg": "screen and (max-width: 1000px)",
+);
+
+// 色
+$text-primary-color: #ffffff;
+$text-secondary-color: #333333;
+$primary-color: #000000;
+$secondary-color: #ff7300;

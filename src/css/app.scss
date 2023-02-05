@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+@import "./foundation/reset";
+
+@import url("https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Noto+Serif+JP&display=swap");
+
+@import "./foundation/variable";
+
+@import "./object/mixin";
+
+@import "./foundation/base";
+
+@import "./layout/loader";
+
+@import "./layout/header";
+
+@import "./layout/main";
+
+@import "./layout/footer";
